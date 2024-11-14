@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deprem Aktivitesi Haritası</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet"  href="css/bootstrap.min.css.map"   />
+    <link rel="stylesheet"  href="css/stylee.css"   />
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+        }
+        /* Üstte sabit kalacak bar için stil */
+        .header {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: auto; /* Adjust the width as needed */
+        background-color: #f0f0f0;
+        padding: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        z-index: 1000;
+        }
+
+        .header div {
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-right: 10px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        }
+
+.text {
+  text-align: center;
+}
+        
+        .low {
+            background-color: yellow;
+            color: black;
+        }
+        .medium {
+            background-color: orange;
+        }
+        .high {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- nvbar kulanım kodları  -->
+    <header>
+
+        <div class="companyBar">
+            <a href="#" class="logo">Deprem Aktivite Haritası</a>
+
+            <div id="depremLogo">
+                <img src="image/depremLogo.png" alt="">
+            </div>
+
+        </div>
+
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar"><span id="menuicon" class="material-symbols-outlined"> menu</span></label>
+
+
+        <nav class="navbar">
+            <ul>
+
+                <li><a href="">Anasayfa</a></li>
+                <li><a href="">Deprem Listesi </a></li>
+                <li><a href="">Hakkımızda</a></li>
+                <li><a href="">İletişim</a></li>
+                
+                
+             
+
+     
+            </ul>
+        </nav>
+
+
+    </header>
+
+
+
+    <!-- Sabit başlık alanı -->
+    <div class="header">
+        <div class="low">Düşük Şiddet (0.0 - 4.0)</div>
+        <div class="medium">Orta Şiddet (4.0 - 5.9)</div>
+        <div class="high">Yüksek Şiddet (6.0+)</div>
+    </div>
+
+    <div id="map" style="margin-top: 80px;"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Haritayı oluşturun ve başlangıç pozisyonunu belirleyin
+        var map = L.map('map').setView([39.9334, 32.8597], 6); // Türkiye koordinatları
+
+        // Harita katmanı için OpenStreetMap kullanın
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Deprem verilerini çekmek için bir API örneği
+        const earthquakeData = [
+            { lat: 38.9637, lon: 35.2433, magnitude: 3.5, location: "Ankara" },
+            { lat: 37.0662, lon: 37.3833, magnitude: 5.2, location: "Gaziantep" },
+            { lat: 40.9833, lon: 29.1167, magnitude: 6.3, location: "İstanbul" }
+        ];
+
+        // Her bir depremi haritaya işaretleyin
+        earthquakeData.forEach(function (quake) {
+            let color = quake.magnitude >= 6 ? 'red' :
+                        quake.magnitude >= 4 ? 'orange' : 'yellow';
+            L.circle([quake.lat, quake.lon], {
+                color: color,
+                fillColor: color,
+                fillOpacity: 0.5,
+                radius: quake.magnitude * 10000
+            }).addTo(map)
+              .bindPopup(`<b>${quake.location}</b><br>Magnitude: ${quake.magnitude}`);
+        });
+       
+        
+
+    </script>
+    <script src="js/bootstrap.min.js" ></script> 
+    <script src="js/script.js" ></script> 
+</body>
+</html>
