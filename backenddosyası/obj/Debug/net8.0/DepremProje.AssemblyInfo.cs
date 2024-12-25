@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DepremProje")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16f2d2e869007243f8dad0154ab0d3cc8b28e108")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1a38987e6993c46489d883344fb5781362a8122")]
 [assembly: System.Reflection.AssemblyProductAttribute("DepremProje")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DepremProje")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
