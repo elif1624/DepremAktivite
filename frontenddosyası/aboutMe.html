@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda</title>
+    <link rel="stylesheet" href="csskodlari/style.css">
+</head>
+<body>
+    <section class="about">
+        <div class="content">
+            <h2>Vizyonumuz</h2>
+            <p>Türkiye genelindeki deprem aktivitelerini daha geniş bir kitleye ulaşabilecek şekilde, anlaşılır ve erişilebilir bir biçimde sunmak. Gerçek zamanlı verilerle, toplumun doğal afetler hakkında bilinçlenmesini sağlamak ve deprem riski taşıyan bölgelerdeki insanlara bilgi sunarak, onlara hazırlıklı olma fırsatı yaratmak. Amacımız, bilgiye dayalı bir toplumsal dayanıklılık oluşturarak, afetlere karşı daha güçlü bir toplum inşa etmektir.</p>
+            <h2>Misyonumuz</h2>
+            <p>Deprem aktivitelerini takip etmek ve haritalamak için sağladığımız platform, kullanıcıların bulundukları bölgelerdeki sismik verileri kolayca anlamalarını sağlar. Bu platform, her bir depremi büyüklüğüne göre renklendirerek ve ölçeklendirerek, kullanıcıların en güncel sismik aktiviteyi görmesini sağlar.Özellikle yüksek risk taşıyan bölgelerde, deprem bilgisi sağlayarak farkındalık yaratmayı hedefliyoruz.</p>
+            
+        </div>
+    </section>
+</body>
+
+</html><style>
+    /* Genel stil ayarları */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* "Hakkımızda" bölümü stil ayarları */
+.about {
+    background-image: url('https://bilimgenc.tubitak.gov.tr/sites/default/files/styles/bp-770px-custom_user_desktop_1x/public/sismograf.jpg?itok=vPBufYhP');
+    background-size: cover;
+    background-position: center;
+    padding: 0; /* paddingi sıfırlayarak tüm alanı tam dolduruyoruz */
+    height: 100vh; /* Görselin yüksekliğini sayfanın yüksekliğiyle eşitliyoruz */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* İçerik kutusunun stil ayarları */
+.content {
+    max-width: 90%; /* Genişliği ekranın %90'ı kadar yapıyoruz */
+    width: 800px; /* Maksimum genişlik 800px */
+    background-color: rgba(0, 0, 0, 0.6); /* Yarı saydam zemin */
+    padding: 40px;
+    border-radius: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Başlık stil ayarları */
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Paragraflar için stil */
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Mobil uyumlu stil */
+@media (max-width: 768px) {
+    .content {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+}
+
+</style>
+</html>
+

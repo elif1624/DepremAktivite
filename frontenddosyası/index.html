@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deprem Aktivitesi Haritası</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="csskodlari/style.css" />
+    
+
+    
+    
+</head>
+<body>
+
+    
+
+    <!-- Navbar Kullanım Kodu -->
+    <header>
+        <div class="companyBar">
+            <a href="#" class="logo">Deprem Aktivite Haritası</a>
+            <div id="depremLogo">
+                <img src="image/resim2.jpg" alt="">
+            </div>
+        </div>
+
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar"><span id="menuicon" class="material-symbols-outlined">menu</span></label>
+
+        <!--Sayfa Yönlendirmeleri-->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="deprem_listesi.html">Deprem Listesi</a></li>
+                <li><a href="aboutMe.html">Hakkımızda</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sabit başlık alanı -->
+    <div class="header">
+        <div class="low">Düşük Şiddet (0.0 - 4.0)</div>
+        <div class="medium">Orta Şiddet (4.0 - 5.9)</div>
+        <div class="high">Yüksek Şiddet (6.0+)</div>
+    </div>
+
+  
+
+    <!-- Veri Kaynağı ve Filtreleme Butonları -->
+    <div class="control-buttons">
+        <button id="toggleDataButton" class="data-source-button" onclick="toggleDataSource()">MongoDB Verileri</button>
+        <button class="filter-button" onclick="toggleFilter()">☰</button>
+    </div>
+
+<!-- Filtreleme Paneli -->
+<div class="filter-panel" id="filterPanel">
+    <button class="close-btn" onclick="toggleFilter()">X</button>
+    <div class="filter-content">
+        <label for="magnitude-range">Büyüklük Aralığı:</label>
+        <select id="magnitude-range">
+            <option value="all">Tümü</option>
+            <option value="low">0.0 - 3.9 (Düşük)</option>
+            <option value="medium">4.0 - 5.9 (Orta)</option>
+            <option value="high">6.0+ (Yüksek)</option>
+        </select>
+
+        <label for="location">Şehir:</label>
+        <input type="text" id="location" placeholder="Şehir adı girin">
+
+        <button id="filter-button" onclick="applyFilter()">Filtrele</button>
+        <button id="reset-button" onclick="resetFilter()">Sıfırla</button> <!-- Sıfırla butonu -->
+    </div>
+</div>
+
+
+    <!-- Harita -->
+     <div id="map" style="margin-top: 80px;"></div> 
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    
+    <script src="jskodlari/all.js"></script>
+    
+    
+</body>
+</html>
