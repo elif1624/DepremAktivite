@@ -85,7 +85,6 @@ C:/Users/zelih/DepremProje/obj/Debug/net8.0/ref/DepremProje.dll
 /Users/elifesratanis/Downloads/SunumProje-main/backenddosyası/obj/Debug/net8.0/DepremProje.AssemblyInfo.cs
 /Users/elifesratanis/Downloads/SunumProje-main/backenddosyası/obj/Debug/net8.0/DepremProje.csproj.CoreCompileInputs.cache
 /Users/elifesratanis/Downloads/SunumProje-main/backenddosyası/obj/Debug/net8.0/DepremProje.MvcApplicationPartsAssemblyInfo.cache
-/Users/elifesratanis/Downloads/SunumProje-main/backenddosyası/obj/Debug/net8.0/DepremProje.sourcelink.json
 /Users/elifesratanis/Downloads/SunumProje-main/backenddosyası/obj/Debug/net8.0/staticwebassets.build.json
 /Users/elifesratanis/Downloads/SunumProje-main/backenddosyası/obj/Debug/net8.0/staticwebassets.development.json
 /Users/elifesratanis/Downloads/SunumProje-main/backenddosyası/obj/Debug/net8.0/staticwebassets/msbuild.DepremProje.Microsoft.AspNetCore.StaticWebAssets.props
